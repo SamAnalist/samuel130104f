@@ -1,0 +1,84 @@
+"""
+Escriba en pantalla el tipo de dato que retorna la expresión 4 < 2
+
+
+num = 4 < 2
+print(type(num))
+"""
+"""
+#Numero 2
+nombre = input("Damos la bienvenida a:")
+print(f"Hola {nombre} bienvenido!")
+"""
+"""
+Evalúe si un número es par o impar y muestre en la consola el mensaje.
+"""
+"""
+#numero 3
+
+num = int(input("Ingresa un numero:"))
+if num % 2:
+    print("Muy bien, el numero es par")
+else:
+    print("El numero no es par")
+"""
+
+"""
+Almacene dos números y evalúe si el primero es mayor que el segundo. El resultado debe verse
+en la consola.
+"""
+"""
+#numero 4
+num1 = int(input("Ingrese un numero:"))
+num2 = int(input("Ingrese otro numero"))
+
+if num1 > num2:
+    print(True)
+else:
+    print(False)
+
+"""
+
+"""
+Convierta dólares a pesos.
+"""
+"""
+#numero 5
+monto = int(input("Ingrese el monto que quiere cambiar a pesos:"))
+taza_dolar =  float(58.55)
+
+res = monto * taza_dolar
+print(str(res) + " DOP")
+"""
+
+"""
+Almacene cuatro notas 90,95,77, 92 y las promedie. Al final debe decir su calificación en letras
+A, B,C,D, E ó F.
+"""
+"""
+#numero 7
+for nota in [90, 95, 77, 92]:
+    if nota >= 90:
+        print("La puntuación es una A")
+    elif nota >= 80:
+        print("La nota es una B")
+    else:
+        print("Tu nota es una C")
+    if nota < 60:
+        print("Tu nota es una F")
+"""
+
+"""
+Que almacene monto, cantidad de cuotas, y porcentaje de interés anual de un préstamo y
+calcule la cuota mensual. (Amortizar mediante el sistema francés)
+"""
+"""
+#numero 8
+monto = 230000.00
+n = 120
+tasa = 0.10 / 12
+
+cuota = monto * (pow(1 + tasa, n) * tasa) / (pow(1 + tasa, n) - 1)
+
+print("El monto a pagar mensual es de: " + str(cuota))
+"""
