@@ -1,0 +1,126 @@
+"""
+– Realizar un programa que solicite al usuario un número indeterminado de
+números (mientras se tecleen números que no sean cero). Al salir el programa
+debe dar en pantalla el total de números dados y la suma de ellos.
+"""
+# # Sumatoria
+"""
+print("Esta es una app que calcula numeros infinitamente, escriba 0 para salir.")
+
+suma = int(input("Ingresa un numero: "))
+
+
+while suma >= 0:
+
+     numero = int(input("Ingresa otro numero: "))
+     suma += numero
+     if numero == 0:
+          exit(print("Gracias, ha salido de la app."))
+
+
+     print(f"La suma de los numeros introducidos es {suma}.")
+"""
+"""
+Realizar un programa que presente un menú con las siguientes opciones
+1- Convertir grados a Celsius a Fahrenheit
+2- Convertir dólar a pesos
+3- Convertir metros a pies
+4- Salir
+"""
+"""
+op = 1
+while op != 0:
+        print("Escriba la operacion que quiere realizar")
+
+        print(
+                "1)Convertir grados a Celsius a Fahrenheit\n2)Convertir dólar a pesos\n3)Convertir metros a pies\n4)Salir")
+        op = int(input("Escriba el numero de opcion que quire realizar:"))
+
+
+        if op == 1:
+
+                print("Esta es una maquina que convierte grados celsius a grados Fahrenheit")
+                gra_cel = int(input("Introduzca grados celsius: "))
+                res1 = (1.8 * float(gra_cel)) + 32
+                print(str(res1) + "°F")
+
+        if op == 2:
+                print("Este es un programa que cambia dolares a RD$")
+                monto = int(input("Ingrese el monto que quiere cambiar a pesos:"))
+                taza_dolar = float(58.55)
+                res = monto * taza_dolar
+                print(str(res) + " DOP")
+
+        if op == 3:
+                print("Este es un programa que covierte de metros a pies")
+                mts = int(input("Introduzca metros: "))
+                res4 = 3.28 * float(mts)
+                print(f"{res4}ft.")
+
+        if op == 4:
+                exit(print("Gracias"))
+                break
+
+"""
+"""
+3- Hacer un programa que genere las tablas de multiplicar de los números
+múltiplos de 5 que hay entre 1 y 1000
+"""
+"""
+for n in range (1, 1000):
+    h = 5
+    if n % 5 == 0:
+
+        x = h * n
+        print(f"{h} x {n} = {x}")
+
+"""
+"""
+Realizar un programa que reciba por teclado el sueldo de un empleado y le
+aplique los cálculos de ISR (ver tabla DGII), ARS, y AFP (investigar porcentajes)
+"""
+"""
+top1 = 400000
+top2 = 600000
+top3 = 800000
+salario = float(input("Ingresa tu sueldo mensual:"))
+salario_anual = salario * 12
+imp = 0
+
+
+if salario_anual <= top1:
+    print("esta extinto\nNo paga")
+
+elif salario_anual >= top3:
+    imp = salario * 0.0125
+    afp = salario * (0.071 / 12)
+    ars = salario * (0.0709 / 12)
+    too = afp + imp + ars
+    print(f"Impuesto mensual de AFP {afp}")
+    print(f"Monto mensual de ars es:{ars}")
+    res = salario - too
+    afp = salario * 0.071
+    print(f"Total de impuestos es de:{imp}")
+    print(f"Monto mensual de impuestos:{too}")
+    total = res * 12
+    print(f"El monto con isr es de:{too*12}")
+    total2 = salario_anual - (imp * 12) - (afp * 12) - (ars * 12)
+    print(f"Monto anual con todos los impuestos {total2}")
+
+else:
+    imp = salario * 0.01666
+    afp = salario * (0.071/12)
+    ars = salario * (0.0709/12)
+    too = afp + imp + ars
+    print(f"Impuesto mensual de AFP {afp}")
+    print(f"Monto mensual de ars:{ars}")
+    res = salario - too
+    afp = salario * 0.071
+    print(f"Total mensual de isr es de:{imp}")
+    print(f"Monto mensual de impuestos:{too}")
+    total = res * 12
+    print(f"El monto con anual es de:{too*12}")
+    total2 = salario_anual - (imp*12) - (afp*12) - (ars*12)
+    print(f"Monto anual con todos los impuestos {total2}")
+"""
+#no pude hacer el numero 5
