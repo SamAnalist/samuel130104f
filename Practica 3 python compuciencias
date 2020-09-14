@@ -1,0 +1,170 @@
+"""1- Hacer una función que potencie un número x a la y"""
+
+"""
+print("Este es un programa que potencia numeros")
+
+num = int(input("Ingresa la base de la potencia:"))
+pot = int(input("Ingresa el potenciador:"))
+
+print(num**pot)
+print("Ha terminado el programa")
+"""
+"""
+2- Realizar una función que pida por pantalla un número del 1 al 10 y muestre
+por pantalla el número escrito en letras.
+"""
+"""
+print("Este es un programa que te pide un numero del 1 al 10 y lo escribe en letras.")
+print("Escribe la palabra clave EXIT para salir del programa.")
+num = int(input("Ingresa un numero:"))
+
+
+if num == 10:
+    print("Numero no valido")
+if num < 0:
+    print("Numero no valido")
+if num == 1:
+   print("Uno")
+
+if num == 2:
+
+   print("Dos")
+if num == 3:
+   print("Tres")
+if num == 4:
+   print("Cuatro")
+if num == 5:
+   print("Cinco")
+if num == 6:
+   print("Seis")
+if num == 7:
+   print("Siete")
+if num == 8:
+    print("Ocho")
+if num == 9:
+    print("Nueve")
+if num == 10:
+    print("Diez")
+if num == 0:
+    print("Cero")
+if num == str("EXIT"):
+
+    exit(print("Has salido del programa"))
+
+"""
+"""
+3- Hacer una función que reciba un año como argumento y retorne
+verdadero si es bisiesto.
+"""
+"""
+print("Esta es una app que te dice si el año que escribiste es bisiesto")
+num = int(input("Ingresa el año que quiere verificar"))
+res = num % 4
+
+if res == 0:
+    print("Este año es bisiesto")
+else:
+    print("Este año no es bisiesto")
+"""
+"""
+4- Crear una función que evalúe dos números y retorne verdadero si ambos
+números son iguales.
+"""
+"""
+print("Este es un programa que dice si los dos valores que escribiste son iguales")
+num = int(input("Ingresa un numero"))
+
+num1 = int(input("Ingresa otro numero"))
+
+if num == num1:
+    print("Es verdadero")
+else:
+    print("Falso")
+
+"""
+"""
+5- Un número palindrómico se lee igual en ambos sentidos. El palíndromo más
+grande hecho del producto de dos números de 2 dígitos es 9009 = 91 × 99.
+Cree una función que encuentre el palíndromo más grande hecho del
+producto de dos números de 3 dígitos.
+"""
+"""
+import random
+r = 0
+limite = 5000
+#mientras mas se le añade al limite, mas numeros se agregan
+while r <= limite:
+
+    n = random.randint(900, 999)
+    t = random.randint(900, 999)
+    mul = n*t
+    m = str(mul)
+    li = list(m)
+    rev = li[::-1]
+
+    while True:
+
+        if rev == li and n != t:
+
+            print(f"{n} x {t} = {mul}")
+            print("Es palidromo")
+        break
+
+
+    r += 1
+"""
+"""
+6- Hacer una función que reciba una cedula como argumento y diga si la
+cedula es válida o no.
+"""
+"""
+
+ced = input("Ingresa tu numero de cedula:")
+li = list(ced)
+
+
+if len(li) == 10:
+    print("Cedula valida")
+else:
+    print("Cedula no valida")
+"""
+"""
+7- Hacer una función que reciba como argumento una lista de elementos
+numéricos y retorno otra lista con cada elemento de la primera lista
+duplicados.
+"""
+"""
+Este es un programa que pide 3 numeros y te los retorna duplicados.
+"""
+"""
+def numero(numero1, numero2, numero3, numero4,numero5,numero6):
+    n1 = numero1 * 2
+    n2 = numero2 * 2
+    n3 = numero3 * 2
+    n4 = numero4 * 2
+    n5 = numero5 * 2
+    n6 = numero6 * 2
+    print(f"La lista es:[{n1},{n2},{n3},{n4},{n5},{n6}]")
+numero(5,6,2,3,2,9)
+"""
+"""
+8- Hacer una función que reciba un valor iniciar y uno final, y muestre en
+pantalla las tablas de multiplicar de los números múltiplos de 6 que hay
+entre el valor inicial y el valor final.
+"""
+"""
+def n(limit1= int(input("Ingresa un limite minimo:")), limit2=int(input("Ingresa un limite maximo"))):
+    t = 0
+    while t <= 10:
+        t += 1
+        for r in range(limit1, limit2):
+            h = r % 6
+            if h == 0:
+
+                res = r * t
+
+                print(f"{r} x {t} = {res}")
+
+n()
+
+"""
