@@ -1,0 +1,151 @@
+"""
+1- Modele tres entidades del mundo real, colocar por lo menos 3
+características distintivas.
+"""
+"""
+
+class Persona:
+    def persona(self):
+        print("My name is " + self.name)
+        print("Tengo " + str(self.edad) + " años")
+        print("Soy " + self.nacionalidad)
+
+
+
+person = Persona()
+person.name = "Sam"
+person.edad = 19
+person.nacionalidad = "Dominicano"
+person.persona()
+"""
+"""
+2- Crear una clase llamada Estudiante con un campo llamado promedio, el cual
+solo podrá ser accedido mediante un metodo. El valor del promedio no puede
+estar por encima de 100 que es la nota máxima.
+"""
+"""
+
+class Estudiante:
+    def perfil_estudiante(self):
+        print(f"Nombre de estudiante: {self.name}")
+        print(f"Numero de orden: {self.num}")
+    def promedio(self, promedio):
+        if promedio > 100:
+            print("Promedio invalido")
+        else:
+            print(f"El promedio del estudiante es: {promedio}/100")
+
+
+est1 = Estudiante()
+est1.name = "Samuel"
+est1.num = 10
+est1.perfil_estudiante()
+est1.promedio(98)
+"""
+"""
+3- Hacer una clase llamada Aritmética, que contenga métodos para cada una de
+las operaciones aritméticas básicas.
+"""
+"""
+class Aritmetica:
+    def ops(self, n1, n2):
+        self.suma = n1 + n2
+        self.resta = n1-n2
+        self.mult = n1*n2
+        self.division = n1/n2
+        if n2 == 0 in self.division:
+            print(f"Numero no valido para dividir {ZeroDivisionError}")
+        print(f"{n1} + {n2} = {self.suma}")
+        print(f"{n1} - {n2} = {self.resta}")
+        print(f"{n1} x {n2} = {self.mult}")
+        print(f"{n1}/{n2} = {self.division}")
+
+
+nums = Aritmetica()
+nums.ops(int(input("Ingresa un numero")),int(input("Ingresa otro numero")))
+"""
+
+"""
+4- Cree una clase llamada Personaje con los métodos de instancia MoverArriba,
+MoverAbajo, MoverDerecha y MoverIzquierda. Cree una clase llamada Mario y
+otra clase llamada Koopa que herede las funcionalidades de la clase Personaje.
+"""
+"""
+class Personaje:
+    def per(self):
+        self.personaje = 1
+    def Mover_arriba(self):
+        print(f" {self.personaje} se mueve hacia arriba")
+    def Mover_abajo(self):
+        print(f" {self.personaje} se mueve hacia abajo")
+    def Mover_derecha(self):
+        print(f" {self.personaje} se mueve hacia derecha")
+    def Mover_izquierda(self):
+        print(f" {self.personaje} se mueve hacia izquierda")
+
+
+class Mario(Personaje):
+    def __init__(self,personaje):
+        self.personaje = "Mario"
+
+class Koopa(Personaje):
+    def __init__(self, personaje):
+        self.personaje = "Koopa"
+
+
+m = Mario("Mario")
+
+m.Mover_derecha()
+m.Mover_abajo()
+k = Koopa("Koopa")
+
+k.Mover_derecha()
+k.Mover_abajo()
+"""
+"""
+5- Cree una clase Carro, con un campo llamado _cantidadCombustible y un
+método que se llame Encender el cual en base a la gasolina disponible
+mostrara si el carro pudo o no avanzar. Cada vez que el método se ejecute,
+deberá restarse 1 a la gasolina disponible. La cantidad de gasolina debe
+establecerse al momento de instanciar un objeto de del tipo de la clase.
+"""
+"""
+class Carro:
+    def cantidad_Combustible(self):
+        if self.galones > 0:
+            print("El vehiculo tiene combustible")
+            print(f"Hay {self.galones} galones")
+        else:
+            print("No hay combustibles")
+    def encender(self):
+        if self.galones > 0:
+            self.encenddido = True
+            print("ENCENDIDO")
+        elif self.galones == 0:
+            exit(print("Ya no hay combustible"))
+        else:
+            self.encenddido = False
+            print("El carro no puede encender, no hay combustible")
+    def avanzar(self):
+        if self.encenddido == True:
+            print("El carro está avanzando")
+
+
+        else:
+            exit()
+        self.galones -= 1
+        if self.galones == 0:
+            exit(print("Ya no hay combustibles"))
+
+        print(f"Quedan {self.galones} galones")
+
+
+
+c = Carro()
+c.galones = 10
+c.cantidad_Combustible()
+c.encender()
+c.avanzar()
+c.avanzar()
+
+"""
